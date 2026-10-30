@@ -1,6 +1,9 @@
 import { defineConfig } from 'vitest/config';
 import { string } from 'rollup-plugin-string';
 import path from 'node:path';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 const libPath = path.resolve(import.meta.dirname, '../../lib');
 
